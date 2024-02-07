@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+<div class="container my-4">
+  <form action="/edit/<%= blog.id %>" method="POST">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title" value="<%= blog.title %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="time" class="form-label">Time</label>
+      <input type="text" class="form-control" id="time" name="time" value="<%= blog.time %>" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>
+<%- include("partials/footer.ejs") %>
